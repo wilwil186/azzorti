@@ -38,9 +38,8 @@ Debe contener **1000 observaciones** con las siguientes características:
 ### Creación de la variable "Venta Neta"  
 Se debe generar una nueva variable **"Venta Neta"**, calculada de la siguiente manera:  
 
-\[
-\text{Venta Neta} = \text{Ventas} - \text{(Impuesto IGV 18%)} - \text{(Descuento variable)}
-\]
+$\text{Venta Neta} = \text{Ventas} - \text{(Impuesto IGV 18\%)} - \text{(Descuento variable)}$
+
 
 **Tabla de descuentos**:
 

@@ -1,0 +1,16 @@
+Venta Neta = 
+VAR VentasActuales = 'ventas_netas'[Ventas]
+VAR IGV = VentasActuales * 0.18
+VAR DescuentoPorc =
+    SWITCH(
+        TRUE(),
+        VentasActuales <= 1500, 0.01,
+        VentasActuales <= 3000, 0.02,
+        VentasActuales <= 7000, 0.03,
+        VentasActuales <= 9000, 0.04,
+        0.05  -- Cualquier otro caso mayor a 9000
+    )
+VAR Descuento = VentasActuales * DescuentoPorc
+RETURN
+    VentasActuales - IGV - Descuento
+
